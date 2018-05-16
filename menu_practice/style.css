@@ -1,0 +1,79 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: relative;
+    width: 100%;
+    background: #444;
+    color: #fff;
+}
+/* common menu */
+ul li {
+    display: inline-block;
+    list-style: none;
+    width: 100px;
+    text-align: center;
+}
+/* global menu */
+.menu li {
+    position: relative;
+    padding: 2px;
+}
+.menu li:after {
+    content: "";
+    width: 0;
+    height: 0;
+}
+/* sub menu */
+.submenu {
+    position: absolute;
+    font-size: .8em;
+    visibility: hidden;
+}
+.submenu li {
+    display: block;
+    margin: auto;
+    padding: 4px 2px;
+    background: #666;
+    overflow: hidden;
+    -webkit-transform: scale(.7);
+    -moz-transform: scale(.7);
+    -ms-transform: scale(.7);
+    -o-transform: scale(.7);
+    transform: scale(.7);
+    opacity: 0;
+}
+
+/* hover effect */
+.menu > li:hover {
+    background: #888;
+    cursor: pointer;
+}
+.menu > li:hover .menu > li:after {
+    animation: anime_border 5s ease;
+}
+.menu > li:hover + .submenu li{
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+@keyframes anime_border {
+    0% {
+        color: #000;
+    }
+    100% {
+        color: #f00;
+    }
+}
