@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="komuro system">
+        <meta property="og:url" content="http://ukkari-ukachan.com/komuro_system/">
+        <meta property="og:discription" content="コムロの事なら何でも聞いて下さい。そんな会社です。">
+        <!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <!-- slick.js -->
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script>
+        $(function(){
+            $('.slider').slick({
+                autoplay: true, //オートプレイ
+                autoplaySpeed: 3500, //オートプレイスピード
+                arrows: false, //前・次のナビゲーション
+                dots: true, //スライドしたのナビゲーションドット
+                infinite: true, //無限ループ
+                fade: false, //フェードイン表示
+                speed: 1500, //スライドアニメーションにかかる時間
+                slidesToShow: 1, //いくつスライドが見えているか
+                adaptiveHeight: true, //
+                pauseOnHover: false, //ホバーした際の自動再生を止めるかどうか
+                centerMode: true,
+                centerPadding: '0px',
+                responsive: [{
+                    breakpoint: 400,
+                }]
+            });
+        }); 
+        </script>
+        <!-- slick.js ここまで -->
+        <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+        <title>KOMURO SYSTEM</title>
+    </head>
+    <body>
+        <section class="main_contents">
+            <aside class="sidebar">
+                <a href="#"><div id="site_title"><img src="./img/site-logo.svg"></div></a>
+                <ul class="main_menu">
+                    <li>
+                        <a href="#">企業案内</a>
+                        <div class="submenu_area">
+                            <ul class="sub_menu">
+                                <li><a href="#">会社概要</a></li>
+                                <li><a href="#">沿革</a></li>
+                                <li><a href="#">組織図</a></li>
+                                <li><a href="#">代表挨拶</a></li>
+                                <li><a href="#">情報セキュリティ<br>基本方針</a></li>
+                                <li><a href="#">会社活動案内</a></li>
+                                <li><a href="#">個人情報保護方針</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">事業案内</a>
+                        <div class="submenu_area">
+                            <ul class="sub_menu">
+                                <li><a href="#">IT事業</a></li>
+                                <li><a href="#">商事事業</a></li>
+                                <li><a href="#">海外事業</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">採用情報</a>
+                        <div class="submenu_area">
+                            <ul class="sub_menu">
+                                <li><a href="#">採用情報<br>特設サイト</a></li>
+                                <li><a href="#">新卒採用情報</a></li>
+                                <li><a href="#">中途採用情報</a></li>
+                                <li><a href="#">エントリー</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">CSR</a>
+                        <div class="submenu_area">
+                            <ul class="sub_menu">
+                                <li><a href="#">コンプライアンス<br>・公正な競争</a></li>
+                                <li><a href="#">コーポレート<br>・ガバナンス</a></li>
+                                <li><a href="#">リスクマネジメント</a></li>
+                                <li><a href="#">ステークホルダーの<br>皆様との関わり</a></li>
+                                <li><a href="#">スポーツを通じた<br>社会貢献活動</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">お問い合わせ</a>
+                    </li>
+                </ul>
+                <div class="mark"><a href="#"><img src="./img/mark.svg"></a></div>
+                <div class="mark"><a href="#"><img src="./img/recruit.svg"></a></div>
+            </aside>
+            <artile class="index">
+                <div id="stage">
+                    <ul class="slider">
+                        <li><img src="./img/world.jpg"></li>
+                        <li><img src="./img/anniva.jpg"></li>
+                        <li><a href="#"><img src="./img/men.jpg"></a></li>
+                    </ul>
+                </div>
+                <aside class="news">
+                    <div class="news_inner">
+                        <div class="news_title">news</div>
+                        <a href="#"><div class="more"></div></a>
+                    </div>
+                </aside>
+                <aside class="new">
+                    <a href="#">
+                        <div class="bar"><span class="circle">new!</span><p class="inner-text">新着案件情報</p><span class="arrow">></span></div>
+                    </a>
+                </aside>
+                <aside class="business">
+                    <h2 class="title-h2">事業内容</h2>
+                    <a href="#">
+                        <div class="photo1" id="it">
+                            <p>IT</p>
+                            <h3>IT事業</h3>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="photo2" id="splash">
+                            <p>COMMERCIAL CORPORATION</p>
+                            <h3>商業事業</h3>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="photo2" id="monaco">
+                            <p>OVERSEAS</p>
+                            <h3>海外事業</h3>
+                        </div>
+                    </a>
+                </aside>
+                <aside class="recruit">
+                    <h2 class="title-h2">採用情報</h2>
+                    <a href="#">
+                        <div class="photo1" id="rec">
+                            <p>RECRUIT PAGE</p>
+                            <h3>採用情報特設サイト</h3>
+                            <img src="">
+                        </div>
+                    </a>
+                </aside>
+            </artile>
+        </section>
+        <footer>
+            <div class="flex footer-top">
+                <nav class="footer-nav">
+                    <ul class="clearfix">
+                        <li><a href="#">企業情報</a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li><a href="#">会社概要</a></li>
+                                    <li><a href="#">沿革</a></li>
+                                    <li><a href="#">組織図</a></li>
+                                    <li><a href="#">代表挨拶</a></li>
+                                    <li><a href="#">情報セキュリティ基本方針</a></li>
+                                    <li><a href="#">会社活動案内</a></li>
+                                    <li><a href="#">個人情報保護方針</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">CSR</a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li><a href="#">コンプライアンス・公平な競争</a></li>
+                                    <li><a href="#">コーポレート・ガバナンス</a></li>
+                                    <li><a href="#">リスクマネジメント</a></li>
+                                    <li><a href="#">ステークホルダーの皆様との関わり</a></li>
+                                    <li><a href="#">スポーツを通じた社会貢献活動</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="clearfix">
+                        <li><a href="#">事業案内</a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li><a href="#">IT事業</a></li>
+                                    <li><a href="#">商事事業</a></li>
+                                    <li><a href="#">海外事業</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">採用情報</a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li><a href="#">新卒採用情報</a></li>
+                                    <li><a href="#">中途採用情報</a></li>
+                                    <li><a href="#">エントリー</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="banner">
+                        <li class="white">
+                            <a href="#">採用情報特設サイト</a>
+                        </li>
+                        <li class="defo">
+                            <a href="#">問い合わせ</a>
+                        </li>
+                        <li class="defo">
+                            <a href="#">小室システム従業員向けサイト</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="feed">
+                    <a class="twitter-timeline" href="https://twitter.com/ukkari_ukachan?ref_src=twsrc%5Etfw">Tweets by ukkari_ukachan</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <a class="logo" href="/"><img src="./img/footer-logo.png"></a>
+                <p>Copyright 2018 Komuro System. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,583 @@
+@charset "utf-8";
+
+/* global settings */
+* {
+    margin: 0;
+    padding: 0;
+    color: #444;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, sans-serif;
+
+}
+ul li {
+    list-style: none;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+}
+/* hidden main manu */
+.hidden-img {
+    position: absolute;
+    visibility: hidden;
+    top: .5em;
+    left: 1em;
+    width: 100%;
+}
+.hidden-img img {
+    position: absolute;
+    visibility: hidden;
+    width: 20%;
+    top: .5em;
+    left: 1em;
+    height: auto;
+    z-index: 1020;
+}
+.main-nav {
+    position: fixed;
+    padding-top: 10%;
+    visibility: hidden;
+    top: -20%;
+    left: 120%;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #fd0;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    z-index: 1000;
+    transition: all 1s;
+}
+.main-nav ul li {
+    margin: auto;
+    position: relative;
+    padding: 2px;
+    width: 350px;
+    height: auto;
+    opacity: 0;
+    font-size: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.main-nav ul li:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: #666;
+}
+.main-nav ul li:hover {
+    background: #fc0;
+    transition: all .7s ease-in;
+}
+.main-nav ul li:hover:before {
+    animation: mainmenu-anime .7s ease 0s;
+}
+/* menu button */
+.circle {
+    display: inline-block;
+    position: fixed;
+    visibility: visible;
+    top: .2em;
+    right: .2em;
+    width: 50px;
+    height: 50px;
+    background: #fd0;
+    text-align: center;
+    line-height: 63.5px;
+    border-radius: 50%;
+    z-index: 1001;
+    cursor: pointer;
+    transition: all 1s;
+}
+.circle:before {
+    position: relative;
+    top: -5px;
+    left: 0;
+    font-family: FontAwesome;
+    font-size: 2em;
+    content: "\f0c9";
+    color: #fff;
+}
+.fa-white {
+    position: relative;
+    color: #fff;
+}
+#menubutton {
+    position: fixed;
+    top: .2em;
+    right: .2em;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1010;
+}
+#menubutton:checked + .nav-wrap > .main-nav {
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: all 1s;
+}
+#menubutton:checked + .nav-wrap > .main-nav .hidden-img img {
+    visibility: visible;
+}
+#menubutton:checked + .nav-wrap > .main-nav ul li {
+    color: #333;
+    font-size: 2em;
+    opacity: 1;
+}
+#menubutton:checked + .nav-wrap > .circle {
+    background: rgb(95, 95, 240);
+    transition: all 1s;
+}
+#menubutton:checked + .nav-wrap > .circle:before {
+    content: "\f00d";
+    transition: all 2s;
+}
+/* top movie area */
+.movie {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 50% 0 0;
+    background-image: url(./img/top-img.jpg);
+    background-size: 250%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    animation: topanime 30s ease-in-out 0s infinite alternate;
+}
+.movie:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50% 0 0;
+    background-image: url(./img/top-img-noise.png);
+    opacity: .1;
+}
+.movie h1 {
+    visibility: hidden;
+}
+header {
+    position: absolute;
+    bottom: 15%;
+}
+header > h1 > img {
+    visibility: visible;
+    width: 30%;
+    height: auto;
+    padding-left: 1em;
+}
+.top-msg {
+    padding-left: 1em;
+    max-width: 90vw;
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: #fff;
+    word-wrap: break-word;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','游明朝体+36ポかな','YuMincho +36p Kana',sans-serif;
+}
+/* other contents header */
+.contents-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.contents-header {
+    position: sticky;
+    top: -100px;
+    width: 100%;
+    height: 100px;
+    font-size: .9em;
+    line-height: 80px;
+}
+.contents-header-img {
+    display: inline-block;
+    width: 30%;
+    height: 80px;
+}
+.contents-header-img img{
+    padding: 5px;
+    width: 100%;
+    height: auto;
+}
+.contents-header-text {
+    position: relative;
+    padding-left: 10px;
+    top: -25%;
+    display: inline-block;
+    width: 69%;
+    white-space: nowrap;
+}
+.other-contents-title {
+    width: 100%;
+    padding: 10%;
+    animation: bg-change 30s linear 0s infinite;
+}
+.other-contents h1, .other-contents p {
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+.other-contents h1 {
+    font-size: 2rem;
+}
+.other-contents p {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+.other-contents-inner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: auto;
+    background: #fafafa;
+}
+.other-contents-inner h2 {
+    margin: auto;
+    width: 80%;
+}
+.other-contents-inner h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+.other-contents-inner dl {
+    margin: auto;
+    width: 80%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.other-contents-inner dl dt {
+    font-weight: bold;
+    float: left;
+}
+.other-contents-inner dl dt {
+    padding: 0.5em 0 0.5em 0;
+    width: 20%;
+}
+.other-contents-inner dl dd {
+    padding: 0.5em 0 0.5em 0;
+    width: 80%;
+}
+.other-contents-inner dl dt, .other-contents-inner dl dd {
+    border-bottom: 1px solid #909090;
+}
+.other-contents-inner dl dt:after {
+    content: "";
+    clear: both;
+}
+.other-contents-inner dl dd {
+    margin-left: 20%;
+    justify-content: space-between;
+}
+.flex2 {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    /* padding-right: 20px;
+    padding-left: 20px; */
+}
+.split2 {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    top: 0;
+    width: 50%;
+    word-break: break-word;
+}
+.split2:first-child {
+    margin-right: 4%;
+}
+.split2:last-child {
+    margin-left: 4%;
+}
+.split2 h4 {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #909090;
+}
+.split2 p {
+    color: #333;
+    text-align: left;
+    font-size: 1em;
+}
+.split2 ul li {
+    position: relative;
+    width: calc(100% - 1.2em);
+    left: 1.2em;
+    padding-left: 0;
+}
+.split2 ul li:before {
+    content: "●";
+    position: absolute;
+    top: 5px;
+    left: -1.2em;
+    font-size: .5em;
+    margin-right: .5em;
+}
+.split2 ul li.white_c:before {
+    content: "○";
+}
+.split2 ul li a {
+    color: #00f;
+}
+.bg_gray {
+    background: #e0e0e0;
+}
+.bg_white {
+    background: #fff;
+}
+.align_center {
+    text-align: center;
+}
+.other-contents-inner:last-child {
+    border-bottom: 1px solid #909090;
+}
+ul.side-by {
+    margin: auto;
+    width: 80%;
+}
+ul.side-by li {
+    display: inline-block;
+}
+.iframe-area {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20%;
+    overflow: hidden;
+}
+.iframe-area iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.park-img:before {
+    font-family: FontAwesome;
+    content: "\f1b9";
+    font-size: 2em;
+}
+/* news area */
+.news-text p a {
+    color: #00f;
+}
+.news {
+    position: relative;
+    margin: auto;
+    background: #f0f0f0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.news-heading {
+    position: absolute;
+    top: -2em;
+    left: 2em;
+    background: #f0f0f0;
+    width: 12em;
+    height: 50px;
+    text-align: center;
+    z-index: 1;
+    cursor: pointer;
+    color: #333;
+}
+.news-heading:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1em;
+    border-radius: 10px;
+    background: #f0f0f0;
+    width: 100%;
+    height: 50px;
+    z-index: -1;
+    cursor: pointer;
+}
+.news-heading:hover {
+    top: -2.5em;
+    transition: all .3s;
+}
+.news-heading:hover:before {
+    top: -1em;
+    transition: all .3s;
+}
+.news-text {
+    margin: auto;
+    padding: 20px 0;
+    width: 80%;
+}
+.square-button {
+    position: relative;
+    border: 1px solid #088;
+    text-align: center;
+    line-height: 100%;
+    color: #088;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    overflow: hidden;
+}
+.square-button a {
+    color: #088;
+}
+.square-button:hover:before {
+    right: -100%;
+    transition: all .3s ease-in-out;
+}
+.button-big {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+}
+.auto-margin {
+    margin: 20px auto;
+}
+.square-button:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #088;
+    opacity: .5;
+    right: 100%;
+    cursor: pointer;;
+}
+/* footer */
+footer {
+    margin: auto;
+    padding: 20px 0;
+    background: #fff;
+    width: 80%;
+    font-size: .9em;
+}
+.footer-nav {
+    margin-bottom: 10px;
+}
+.footer-nav li {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    border-left: 1px solid #d0d0d0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.footer-nav li:last-child {
+    border-right: 1px solid #d0d0d0;
+}
+.footer-nav li:before, .footer-nav li:after {
+    content: "";
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 0;
+    background: #909090;
+}
+.footer-nav li:before {
+    top: 2px;
+}
+.footer-nav li:after {
+    bottom: 2px;
+}
+.footer-nav li:hover a{
+    color: #909090;
+}
+.footer-nav li:hover:before {
+    height: 3px;
+    top: -2px;
+    transition: all .3s ease-in;
+}
+.footer-nav li:hover:after {
+    height: 3px;
+    bottom: -2px;
+    transition: all .3s ease-in;
+}
+footer h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* animation */
+@keyframes topanime {
+    0% {
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    50% {
+        background-size: 200%;
+    }
+    100% {
+        background-position-x: 60%;
+        background-position-y: 90%;
+        background-size: 280%;
+    }
+}
+@-webkit-keyframes topanime {
+    0% {
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    50% {
+        background-size: 200%;
+    }
+    100% {
+        background-position-x: 60%;
+        background-position-y: 90%;
+        background-size: 280%;
+    }
+}
+@keyframes mainmenu-anime {
+    0%{
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+    }
+    33%{
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 2px;
+    }
+    66%{
+        top: 0;
+        left:100%;
+        width: 2px;
+        height: 100%;
+    }
+    100%{
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+    }
+}
+@keyframes bg-change {
+    0% {
+        background: #00f;
+    }
+    25% {
+        background: #088;
+    }
+    50% {
+        background: #f00;
+    }
+    75% {
+        background: #088;
+    }
+    100% {
+        background: #00f;
+    }
+}
