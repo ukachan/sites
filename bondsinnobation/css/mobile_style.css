@@ -1,0 +1,111 @@
+@media screen and (max-width: 750px) {
+    .header-img .msg-four, .header-img .msg-five {
+        font-size: 2.5em;
+    }
+    .header-img .msg-four {
+        bottom: -10px;
+    }
+    .header-img .msg-five {
+        top: -3px;
+    }
+    nav ul a li {
+        font-size: 1.1em;
+        padding: 10px 5px;
+    }
+    .contents_inner {
+        height: 150px;
+    }
+    .img, .str {
+        height: 150px;
+    }
+    .str {
+        font-size: 1.8em;
+        line-height: 150px;
+    }
+    .left::before, .right::before {
+        height: 150px;
+    }
+    .mobile_com {
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 640px) {
+    .header-img .msg {
+        font-size: 2.4em;
+    }
+    nav ul a li {
+        padding: 10px 0;
+    }
+    header .logo {
+        min-width: 350px;
+    }
+    .inquiry {
+        padding-right: 1em;
+    }
+    .header-img .msg-four, .header-img .msg-five {
+        font-size: 2em;
+    }
+    footer strong {
+        font-size: 1.2em;
+    }
+    .contents_inner {
+        height: 130px;
+    }
+    .img, .str {
+        height: 130px;
+    }
+    .str {
+        font-size: 1.8em;
+        line-height: 130px;
+    }
+    .left::before, .right::before {
+        height: 130px;
+    }
+    .message strong {
+        font-size: 1.2em;
+    }
+    footer p {
+        display: block;
+    }
+}
+@media screen and (max-width: 570px) {
+    nav ul a li {
+        font-size: 1em;
+    }
+    input {
+        width: 15em;
+    }
+    #comment {
+        width: 14.5em;
+    }
+    .message {
+        padding: 1em;
+        font-size: 1.3em;
+    }
+    .right_text {
+        font-size: .8em;
+    }
+}
+@media screen and (max-width: 510px) {
+    nav ul a li {
+        font-size: .8em;
+    }
+}
+@media screen and (max-width: 430px) {
+    nav ul a li {
+        font-size: .8em;
+    }
+    .contents_inner {
+        height: 120px;
+    }
+    .img, .str {
+        height: 120px;
+    }
+    .str {
+        font-size: 1.8em;
+        line-height: 120px;
+    }
+    .left::before, .right::before {
+        height: 120px;
+    }
+}
